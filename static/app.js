@@ -48,9 +48,14 @@ const connect = async (username) => {
     });
     const data = await response.json();  // Access token
     // console.log(data)
-    console.log('connect method:', Twilio.Video.connect)
+    // console.log('connect method:', Twilio.Video.connect)
     console.log('token:', data.token)
-    room = await Twilio.Video.connect(data.token, { room: "My Room" }); //Adds person to the video room.
+    await Twilio.Video.connect(data.token).then(function (room) {
+        console.log('Successfully joined a Room: ', room);
+    }, function (error) {
+        console.error('Unable to connect to Room: ' + error.message);
+    });
+    // room = await Twilio.Video.connect(data.token, { room: "My Room" }); //Adds person to the video room.
     // room = await Twilio.Video.connect('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiI8U0syYjY0MTg1YzA4NTdkMmJlY2MwMzFhNDkwMDc5NDczMj4tMTY0ODkzNjAyNCIsImdyYW50cyI6eyJ2aWRlbyI6eyJyb29tIjoiTXkgUm9vbSJ9LCJpZGVudGl0eSI6MTk0MjE4MDE1NTQwODc3MjQzNDc1MjQ4OTExNzU0NDQzOTk0NDY4fSwiaXNzIjoiPFNLMmI2NDE4NWMwODU3ZDJiZWNjMDMxYTQ5MDA3OTQ3MzI-IiwiZXhwIjoxNjQ4OTM5NjI0LCJuYmYiOjE2NDg5MzYwMjQsInN1YiI6IjxBQzg0MTM0ZmE4ZTg3Zjc1ZmE3OThhZjM2MDlkOTNkOWJmPiJ9._rjt3ulYfsBAJl5ED59ucAMy2vV5c1Hzl2MmP-jyZp0')
     console.log('room:', room)
     room.participants.forEach(participantConnected);
