@@ -27,6 +27,10 @@
       <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+        import { getDatabase } from "firebase/database";
+
+        const database = getDatabase();
+
         const firebaseConfig = {
           apiKey: "AIzaSyCwNYu4hD1k7FNt3t2vGxqgIRcvv48ShEM",
           authDomain: "therapize-190ef.firebaseapp.com",
@@ -39,6 +43,12 @@
 
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+
+        // Expects a json file with attributes name, rating, personality type, and ID
+        function add_live_therapist(therapist_data){
+          const db = getDatabase();
+          set(ref(db, 'users/' + therapist_data["ID"]), therapist_data);
+        }
       </script>
   </body>
 
