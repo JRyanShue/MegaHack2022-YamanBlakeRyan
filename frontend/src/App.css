@@ -66,6 +66,16 @@
   /* visibility: show; */
 }
 
+.face-sentiment {
+  position: fixed;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  top: 175px;
+  left: 1275px;
+  /* visibility: show; */
+}
+
 iframe {
   left: 100px;
   justify-content: center;

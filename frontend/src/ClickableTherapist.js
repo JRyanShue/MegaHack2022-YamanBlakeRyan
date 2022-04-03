@@ -26,7 +26,7 @@ function ClickableTherapist(props) {
     <div onMouseEnter={grey} onMouseLeave={normal} onMouseDown={handleClick} onMouseUp={grey} style={{
       backgroundColor: backgroundColor,
     }} className='therapist'>
-      {props.name} - {props.score}/100
+      {props.name} - {props.score}/100 - Time Available: {props.timeAvailable}
     </div>
   )
 

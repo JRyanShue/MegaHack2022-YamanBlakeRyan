@@ -14,5 +14,5 @@ var takeScreenShot = function() {
             link.click();
         }
     });
-    myVar = setTimeout(takeScreenShot, 10000);
+    // myVar = setTimeout(takeScreenShot, 10000);
 }
