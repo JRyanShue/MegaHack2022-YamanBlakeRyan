@@ -1,6 +1,4 @@
-# MegaHack2022 - Blake Akner, Yaman Habip, Ryan Shue
-
-## Therapize
+# MegaHack2022 - Blake Akner, Yaman Habip, Ryan Shue: Therapize
 
 Our project is built to address prompt category 6: health 
 and sustainable development goal #3: Good Health and Well-Being. 
