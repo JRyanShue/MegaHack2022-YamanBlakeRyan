@@ -1,7 +1,6 @@
-import cv2
-from deepface import DeepFace
-
 def face_sentiment(img): #expects string with image title
+    import cv2
+    from deepface import DeepFace
     to_analyze = cv2.imread(img)
     analysis = DeepFace.analyze(to_analyze)
     mood = analysis["dominant_emotion"]
@@ -20,5 +19,5 @@ def face_sentiment(img): #expects string with image title
     else:
         return "😐"
 
-# def review_sentiment(review):
-#     return
+ def review_sentiment(review):
+     return
