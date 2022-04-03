@@ -6,7 +6,7 @@ import DailyIframe from '@daily-co/daily-js';
 
 function App() {
 
-  const [callFrame, setCallFrame] = useState('nujll');
+  // const [callFrame, setCallFrame] = useState('nujll');
 
   function connectToRoom() {
 
@@ -26,9 +26,11 @@ function App() {
 
     // console.log(DailyIframe.wrap(MY_IFRAME, room))
     // setCallFrame(DailyIframe.wrap(MY_IFRAME, room));
-    setCallFrame('asdfasdfa')
-    console.log('callFrame', callFrame)
+    // setCallFrame('asdfasdfa')
+    // console.log('callFrame', callFrame)
 
+    const callFrame = DailyIframe.wrap(MY_IFRAME, room);
+    callFrame.join();
   }
 
   useEffect(() => {
@@ -37,18 +39,19 @@ function App() {
     
   }, []);
 
-  function joinRoom() {
-    console.log('joinRoom');
-    setCallFrame('asdfasdfaa')
-    console.log(callFrame);
-    if (callFrame) {
-      callFrame.join();
-    }
-  }
+  // function joinRoom() {
+  //   console.log('joinRoom');
+  //   setCallFrame('asdfasdfaa')
+  //   console.log(callFrame);
+  //   if (callFrame) {
+  //     callFrame.join();
+  //   }
+  // }
 
+  // joinRoom={joinRoom}/>
   return (
     <div className="App">
-      <Banner joinRoom={joinRoom}/>
+      <Banner/>  
       <div style={{
         left: '100px'
       }}>
