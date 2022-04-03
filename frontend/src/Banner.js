@@ -4,30 +4,30 @@ import { ClickableTherapist } from './ClickableTherapist';
 
 var exampleJson = {
   "available_therapists": [
-    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
-    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
-    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
-    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
-    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
-    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
-    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
-    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
-    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
-    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
-    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
-    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
-    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
-    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
-    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
-    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
-    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
-    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
-    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
-    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
-    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
-    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
-    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
-    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5", "time-available": "30 minutes"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5", "time-available": "15 minutes"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5", "time-available": "20 minutes"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5", "time-available": "15 minutes"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5", "time-available": "25 minutes"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5", "time-available": "1 hour"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5", "time-available": "2 hours"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5", "time-available": "90 minutes"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5", "time-available": "80 minutes"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5", "time-available": "35 minutes"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5", "time-available": "45 minutes"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5", "time-available": "40 minutes"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5", "time-available": "10 minutes"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5", "time-available": "15 minutes"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5", "time-available": "50 minutes"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5", "time-available": "1 hour"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5", "time-available": "75 minutes"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5", "time-available": "20 minutes"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5", "time-available": "25 minutes"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5", "time-available": "30 minutes"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5", "time-available": "25 minutes"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5", "time-available": "85 minutes"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5", "time-available": "30 minutes"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5", "time-available": "40 minutes"},
   ]
 }
 
@@ -77,7 +77,7 @@ function Banner(props) {
           Welcome to Therapize! - Here are some people who are available to talk:
         </div>
       </div>
-      
+
       <br/>
       <div className="therapists-list">
         {therapistsDisplay}
