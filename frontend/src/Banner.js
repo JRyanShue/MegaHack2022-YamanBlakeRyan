@@ -1,8 +1,25 @@
 
 import { useState, useEffect } from 'react';
+import { ClickableTherapist } from './ClickableTherapist';
 
 var exampleJson = {
   "available_therapists": [
+    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
+    {"name": "Dr. Smith", "id": "1", "score": "90.5"},
+    {"name": "Dr. Jones", "id": "2", "score": "80.5"},
+    {"name": "Dr. Brown", "id": "3", "score": "70.5"},
+    {"name": "Dr. Wilson", "id": "4", "score": "60.5"},
     {"name": "Dr. Smith", "id": "1", "score": "90.5"},
     {"name": "Dr. Jones", "id": "2", "score": "80.5"},
     {"name": "Dr. Brown", "id": "3", "score": "70.5"},
@@ -40,9 +57,7 @@ function Banner() {
       {
         console.log('therapist:', therapist)
         return (
-          <div>
-            {therapist.name} - {therapist.score}/100
-          </div>
+          <ClickableTherapist name={therapist.name} score={therapist.score/100}/>
         )
       }
     }));

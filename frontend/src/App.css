@@ -14,9 +14,11 @@
 }
 
 .banner .therapists-list {
-  width: 100px;
+  /* width: 100px; */
   height: 100px;
-  display: inline-block;
+  
+  /* display: block; */
+  display: grid;
   overflow: auto;
   grid-template-columns: auto auto auto;
 }
