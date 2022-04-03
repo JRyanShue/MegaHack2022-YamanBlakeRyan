@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <title>Therapize</title>
+  </head>
+
+  <body>
+      <h1>Flask & Twilio Video Conference</h1>
+      <form>
+          <label for="username">Name: </label>
+          <input type="text" name=”username” id="username">
+          <button id="join_leave">Join call</button>
+      </form>
+      <p id="count"></p>
+      <div id="container" class="container">
+          <div id="local" class="participant">
+              <div></div>
+              <div>Me</div>
+          </div>
+          <!-- more participants will be added dynamically here -->
+      </div>
+
+      <script src="//media.twiliocdn.com/sdk/js/video/releases/2.3.0/twilio-video.min.js"></script>
+      <script src="{{ url_for('static', filename='app.js') }}"></script>
+      <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyCwNYu4hD1k7FNt3t2vGxqgIRcvv48ShEM",
+          authDomain: "therapize-190ef.firebaseapp.com",
+          projectId: "therapize-190ef",
+          storageBucket: "therapize-190ef.appspot.com",
+          messagingSenderId: "108495629714",
+          appId: "1:108495629714:web:9d0760dc86fe6e715ba54b",
+          measurementId: "G-DLY4SC67QX"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+  </body>
+
+</html>
