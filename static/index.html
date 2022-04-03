@@ -44,7 +44,7 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
 
-        // Expects a json file with attributes name, rating, personality type, and ID
+        // Expects a json file with attributes name, rating, personality type, ID, and time available
         function add_live_therapist(therapist_data){
           const db = getDatabase();
           set(ref(db, 'users/' + therapist_data["ID"]), therapist_data);
