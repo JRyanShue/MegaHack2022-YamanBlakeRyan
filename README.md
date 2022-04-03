@@ -1,6 +1,6 @@
 # Therapize
 
-Our project is built to address prompt category 6: health 
+Our project is built to address prompt 6: health 
 and sustainable development goal #3: Good Health and Well-Being. 
 _Therapize_ connects people seeking mental health with 
 volunteer professionals, aiming to increase access to mental health 
