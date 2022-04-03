@@ -6,7 +6,10 @@ import DailyIframe from '@daily-co/daily-js';
 
 function App() {
 
-  // const [callFrame, setCallFrame] = useState('nujll');
+  const [callFramee, setCallFrame] = useState('nujll');
+  const [_var, setVar] = useState(0);
+  var __var = 0
+  var callFrame
 
   function connectToRoom() {
 
@@ -26,11 +29,18 @@ function App() {
 
     // console.log(DailyIframe.wrap(MY_IFRAME, room))
     // setCallFrame(DailyIframe.wrap(MY_IFRAME, room));
-    // setCallFrame('asdfasdfa')
-    // console.log('callFrame', callFrame)
+    console.log(setCallFrame)
+    setCallFrame('asdfasdfa')
+    console.log('callFrame', callFramee)
 
-    const callFrame = DailyIframe.wrap(MY_IFRAME, room);
-    callFrame.join();
+    setVar(1)
+    console.log('_var', _var)
+
+    __var = 1
+    console.log('__var', __var)
+
+    callFrame = DailyIframe.wrap(MY_IFRAME, room);
+    // callFrame.join();
   }
 
   useEffect(() => {
@@ -38,6 +48,20 @@ function App() {
     connectToRoom();
     
   }, []);
+
+  function joinRoom() {
+    if (callFrame) {
+      callFrame.join();
+    }
+  }
+
+  function handleClick() {
+    setVar(2)
+    console.log('_var', _var)
+
+    __var = 2
+    console.log('__var', __var)
+  }
 
   // function joinRoom() {
   //   console.log('joinRoom');
@@ -51,12 +75,8 @@ function App() {
   // joinRoom={joinRoom}/>
   return (
     <div className="App">
-      <Banner/>  
-      <div style={{
-        left: '100px'
-      }}>
-        <MainScreen/>
-      </div>
+      <Banner joinRoom={joinRoom}/>  
+      <MainScreen/>
       {/* <MainScreen/> */}
       {/* <div id='call-frame' style={{
         height: '300px'
