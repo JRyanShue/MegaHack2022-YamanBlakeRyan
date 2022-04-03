@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "create-react-app": "^5.0.0"
+    "create-react-app": "^5.0.0",
+    "http-serve": "^1.0.1",
+    "http-server": "^14.1.0",
+    "serve": "^13.0.2"
   }
 }

@@ -28,6 +28,21 @@
   height: 100%;
 }
 
+.main-screen .video-container {
+  align-items: center;
+}
+
+.main-screen .video-container .video-iframe {
+  margin-left: 50px;
+  height: 500px;
+  width: 1000px;
+}
+
+iframe {
+  left: 100px;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
 }

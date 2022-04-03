@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 
 import Twilio from 'twilio-video';
+import DailyIframe from '@daily-co/daily-js';
 const Video = Twilio.Video;
 
 function MainScreen() {
@@ -37,11 +38,56 @@ function MainScreen() {
   //   }
   // }
 
+  // const callFrame = null;
+
+  // useEffect(() => {
+  //   const MY_IFRAME = document.getElementById('iframe');
+  //   MY_IFRAME.setAttribute(
+  //     'allow',
+  //     'microphone; camera; autoplay; display-capture'
+  //   );
+  //   MY_IFRAME.style.height = '500px'
+  //   MY_IFRAME.style.width = '1000px'
+  //   // MY_IFRAME.style.margin = 'auto'
+  //   MY_IFRAME.style.marginLeft = '50%'
+  //   MY_IFRAME.style.transform = 'translate(-50%)';
+  //   // MY_IFRAME.style.justifyContent = 'center'
+  //   // MY_IFRAME.style.display = 'flex'
+  //   // MY_IFRAME.style.top = '50px'
+  //   let room = { url: "https://popschools.daily.co/qOrbXQ3zJZC7o7aH8ycI" };
+
+  //   document.body.appendChild(MY_IFRAME);
+
+  //   const callFrame = DailyIframe.wrap(MY_IFRAME, room);
+
+  //   // const callFrame = window.DailyIframe.createFrame({
+  //   //   iframeStyle: {
+  //   //     position: 'fixed',
+  //   //     border: '1px solid black',
+  //   //     width: '375px',
+  //   //     height: '450px',
+  //   //     right: '1em',
+  //   //     bottom: '1em',
+  //   //   },
+  //   //   showLeaveButton: true,
+  //   //   showFullscreenButton: true,
+  //   // });
+    
+  // }, []);
+
+  // function joinRoom() {
+  //   if (callFrame) {
+  //     callFrame.join();
+  //   }
+  // }
+
   return (
     <div className="main-screen">
       
       <div className="video-container">
+        <iframe id='iframe' className='video-iframe'>
 
+        </iframe>
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ var exampleJson = {
   ]
 }
 
-function Banner() {
+function Banner(props) {
 
   const [availableTherapists, setAvailableTherapists] = useState(exampleJson);
 
@@ -57,7 +57,7 @@ function Banner() {
       {
         console.log('therapist:', therapist)
         return (
-          <ClickableTherapist name={therapist.name} score={therapist.score/100}/>
+          <ClickableTherapist name={therapist.name} score={therapist.score/100} joinRoom={props.joinRoom}/>
         )
       }
     }));
@@ -66,6 +66,7 @@ function Banner() {
 
   useEffect(() => {
     updateTherapistsDisplay( availableTherapists );
+    // console.log('availableTherapists:', availableTherapists);
   }, []);
 
   return (
