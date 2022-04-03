@@ -57,7 +57,7 @@ function Banner(props) {
       {
         console.log('therapist:', therapist)
         return (
-          <ClickableTherapist name={therapist.name} score={therapist.score/100} joinRoom={props.joinRoom}/>
+          <ClickableTherapist name={therapist.name} score={therapist.score} joinRoom={props.joinRoom}/>
         )
       }
     }));
@@ -71,13 +71,18 @@ function Banner(props) {
 
   return (
     <div className="banner">
-      <div className="label">
-        Available People to Talk To:
+
+      <div className="label-container">
+        <div className="label">
+          Welcome to Therapize! - Here are some people who are available to talk:
+        </div>
       </div>
+      
       <br/>
       <div className="therapists-list">
         {therapistsDisplay}
       </div>
+
     </div>
   );
 }

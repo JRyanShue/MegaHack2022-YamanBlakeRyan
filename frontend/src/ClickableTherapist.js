@@ -4,27 +4,27 @@ import { run, start } from './VideoFunctions';
 
 function ClickableTherapist(props) {
 
-  const [backgroundColor, setBackgroundColor] = useState('azure');
+  const [backgroundColor, setBackgroundColor] = useState('rgb(255, 203, 216)');
 
   const joinRoom = props.joinRoom;
 
   function grey() {
-    setBackgroundColor('lightgrey');
+    setBackgroundColor('#f5eddc');
   }
   function normal() {
-    setBackgroundColor('azure');
+    setBackgroundColor('rgb(255, 203, 216)');
   }
 
   function handleClick() {
-    setBackgroundColor('grey');
+    setBackgroundColor('#413f3f');
     joinRoom();
   }
 
   return (
     <div onMouseEnter={grey} onMouseLeave={normal} onMouseDown={handleClick} onMouseUp={grey} style={{
       backgroundColor: backgroundColor,
-    }}>
-      {props.name}
+    }} className='therapist'>
+      {props.name} - {props.score}/100
     </div>
   )
 

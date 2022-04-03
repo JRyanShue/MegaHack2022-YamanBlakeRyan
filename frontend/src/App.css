@@ -1,15 +1,26 @@
 
 .banner {
-  background-color: azure;
+  margin: 20px;
+  background-color: rgb(255, 203, 216);
   padding: 10px;
+  border-radius: 30px;
   /* height: 150px; */
   /* border: 1px solid black; */
 }
 
-.banner .label {
+.banner .label-container {
+  align-items: center;
+}
+
+.banner .label-container .label {
   color: black;
-  background-color: azure;
+  background-color: rgb(183, 143, 203);
+  border-radius: 15px;
+  padding: 10px;
   text-align: center;
+  width: max-content;
+  margin-left: 50%;
+  transform: translateX(-50%);
   /* padding-top: 10px; */
 }
 
@@ -23,6 +34,10 @@
   grid-template-columns: auto auto auto;
 }
 
+.banner .therapists-list .therapist {
+  border-radius: 10px;
+}
+
 .main-screen {
   background-color: azure;
   height: 100%;
@@ -30,6 +45,8 @@
 
 .main-screen .video-container {
   align-items: center;
+  border-radius: 10px;
+  background-color: rgb(183, 143, 203);
 }
 
 .main-screen .video-container .video-iframe {
@@ -45,6 +62,7 @@ iframe {
 
 .App {
   text-align: center;
+  /* background-color: rgb(183, 143, 203); */
 }
 
 .App-logo {
