@@ -19,7 +19,7 @@ li {
 }
 .call-panel {
   min-height: 600px;
-  background-image: url("../assets/people-square.png");
+  background-image: url("assets/people-square.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;

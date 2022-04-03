@@ -54,6 +54,14 @@ async function messageReceived(e) {
     handState.updateList(e);
 }
 
+// async function getScreenShot(){
+//     let c = this.elem.nativeElement.querySelector('tile'); // or document.getElementById('canvas');
+//     html2canvas(c).then((canvas:any)=>{
+//         var t = canvas.toDataURL().replace("data:image/png;base64,", "");
+//         this.downloadBase64File('image/png',t,'image');
+//     })
+// }
+
 async function joinedMeeting(e) {
     localParticipant = {
         ...e.participants.local,
@@ -71,7 +79,7 @@ async function joinedMeeting(e) {
       alt="hand icon"
       />  
   
-      <p class="name-label"><strong>${localParticipant.user_name ||
+      <p class="name-label"><strong>${localParticipant.user_name || //this is where the names are taken from! We can supliment with our own??
         "You"}</strong></p>
       <button
         class="button is-info raise-hand-button"
@@ -135,6 +143,8 @@ function updateParticipants() {
         list.append(li);
     });
 }
+
+
 async function run() {
     // setting up for conditional rendering
     const welcomePrompt = document.querySelector(".welcome-box");
