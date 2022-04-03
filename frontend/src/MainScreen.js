@@ -1,11 +1,10 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-import Twilio from 'twilio-video';
 import DailyIframe from '@daily-co/daily-js';
-const Video = Twilio.Video;
+import { LeaveButton } from './LeaveButton';
 
-function MainScreen() {
+function MainScreen(props) {
 
   // useEffect(() => {
   //   const { connect } = require('twilio-video');
@@ -81,6 +80,12 @@ function MainScreen() {
   //   }
   // }
 
+  // const [leaveMeetingVisibility, setLeaveMeetingVisibility] = useState('hidden');
+
+  // if (props.leaveMeetingVisibility == 'true') {
+  //   setLeaveMeetingVisibility('show');
+  // }
+
   return (
     <div className="main-screen">
       
@@ -89,6 +94,16 @@ function MainScreen() {
 
         </iframe>
       </div>
+
+      <div style={{
+        visibility: props.leaveMeetingVisibility
+      }}>
+        <LeaveButton setModalOpen={props.setModalOpen}/>
+      </div>
+      
+      {/* asdfasdf
+      {props.roomJoined} */}
+      {/* {props.leaveMeetingVisibility} */}
     </div>
   );
 }
