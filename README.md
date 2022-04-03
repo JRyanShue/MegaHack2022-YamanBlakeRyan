@@ -1,4 +1,4 @@
-# MegaHack2022 - Blake Akner, Yaman Habip, Ryan Shue: Therapize
+# Therapize
 
 Our project is built to address prompt category 6: health 
 and sustainable development goal #3: Good Health and Well-Being. 
@@ -15,3 +15,5 @@ perform their jobs by performing a mood analysis using the DeepFace library
 on patients' faces and updating the therapists on the predicted feelings
 of patients on a minutely basis. We use Firebase to store data about professionals
 who are available at given times. 
+
+###### Built by Blake Akner, Yaman Habip, and Ryan Shue for MegaHack2022
