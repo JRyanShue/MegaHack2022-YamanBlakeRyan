@@ -1,6 +1,6 @@
 
 .banner {
-  margin: 20px;
+  margin: 10px;
   background-color: rgb(255, 203, 216);
   padding: 10px;
   border-radius: 30px;
@@ -26,7 +26,7 @@
 
 .banner .therapists-list {
   /* width: 100px; */
-  height: 100px;
+  height: 70px;
   
   /* display: block; */
   display: grid;
@@ -53,6 +53,17 @@
   margin-left: 50px;
   height: 500px;
   width: 1000px;
+}
+
+.leave-button {
+  position: fixed;
+  border-radius: 10px;
+  background-color: red;
+  padding: 10px;
+  border: 1px solid black;
+  top: 635px;
+  left: 1275px;
+  /* visibility: show; */
 }
 
 iframe {

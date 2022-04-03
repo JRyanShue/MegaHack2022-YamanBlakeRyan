@@ -57,7 +57,7 @@ function Banner(props) {
       {
         console.log('therapist:', therapist)
         return (
-          <ClickableTherapist name={therapist.name} score={therapist.score} joinRoom={props.joinRoom}/>
+          <ClickableTherapist name={therapist.name} score={therapist.score} joinRoom={props.joinRoom} leaveMeetingVisibility={props.leaveMeetingVisibility} setLeaveMeetingVisibility={props.setLeaveMeetingVisibility}/>
         )
       }
     }));

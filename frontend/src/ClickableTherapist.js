@@ -7,6 +7,7 @@ function ClickableTherapist(props) {
   const [backgroundColor, setBackgroundColor] = useState('rgb(255, 203, 216)');
 
   const joinRoom = props.joinRoom;
+  const setLeaveMeetingVisibility = props.setLeaveMeetingVisibility;
 
   function grey() {
     setBackgroundColor('#f5eddc');
@@ -18,6 +19,7 @@ function ClickableTherapist(props) {
   function handleClick() {
     setBackgroundColor('#413f3f');
     joinRoom();
+    props.setLeaveMeetingVisibility('visible');
   }
 
   return (

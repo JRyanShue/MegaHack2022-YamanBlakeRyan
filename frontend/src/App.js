@@ -3,6 +3,7 @@ import { Banner } from './Banner';
 import { MainScreen } from './MainScreen';
 import { useEffect, useState } from 'react';
 import DailyIframe from '@daily-co/daily-js';
+import Modal from 'react-modal';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
     MY_IFRAME.style.width = '1000px'
     MY_IFRAME.style.marginLeft = '50%'
     MY_IFRAME.style.transform = 'translate(-50%)';
+    MY_IFRAME.style.zIndex = '1'
     let room = { url: "https://popschools.daily.co/qOrbXQ3zJZC7o7aH8ycI" };
 
     document.body.appendChild(MY_IFRAME);
@@ -43,6 +45,16 @@ function App() {
     // callFrame.join();
   }
 
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   useEffect(() => {
     
     connectToRoom();
@@ -55,34 +67,30 @@ function App() {
     }
   }
 
-  function handleClick() {
-    setVar(2)
-    console.log('_var', _var)
+  const [leaveMeetingVisibility, setLeaveMeetingVisibility] = useState('hidden');
 
-    __var = 2
-    console.log('__var', __var)
-  }
-
-  // function joinRoom() {
-  //   console.log('joinRoom');
-  //   setCallFrame('asdfasdfaa')
-  //   console.log(callFrame);
-  //   if (callFrame) {
-  //     callFrame.join();
-  //   }
-  // }
-
-  // joinRoom={joinRoom}/>
   return (
     <div className="App">
-      <Banner joinRoom={joinRoom}/>  
-      <MainScreen/>
+      <Banner joinRoom={joinRoom} leaveMeetingVisibility={leaveMeetingVisibility} setLeaveMeetingVisibility={setLeaveMeetingVisibility}/>  
+      <MainScreen leaveMeetingVisibility={leaveMeetingVisibility} setModalOpen={setIsOpen}/>
       {/* <MainScreen/> */}
       {/* <div id='call-frame' style={{
         height: '300px'
       }}> */}
 
       {/* </div> */}
+      {/* <div>
+        {leaveMeetingVisibility}
+      </div> */}
+      <Modal isOpen={modalIsOpen}>
+        <form>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
+          </form>
+      </Modal>
     </div>
   );
 }

@@ -10,6 +10,7 @@
     "http-server": "^14.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-modal": "^3.14.4",
     "react-scripts": "5.0.0",
     "twilio-video": "^2.21.1",
     "web-vitals": "^2.1.4"
