@@ -46,4 +46,4 @@ def review_sentiment(review): #expects string with review
 
     rating *= 20 #turn rating into a score out of 100
 
-    return rating
+    return round(rating, 1)
